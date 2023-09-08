@@ -7,7 +7,7 @@ void run()
     std::ofstream ofs("output.csv", std::ofstream::out);
 
     // Add the top row of the CSV file
-    ofs << "Listing Code, Brand, Model, Reference Number, Movement, Case Material, Bracelet Material, Condition, Year of Production, Scope Of Delivery, Gender, Price, Number of Jewels, Dial, URL\n";
+    ofs << "Listing Code,Brand,Model,Reference Number,Movement,Case Material,Bracelet Material,Condition,Year of Production,Scope Of Delivery,Gender,Price,Number of Jewels,Dial,URL\n";
 
     while (crawler.getNextContent())
     {

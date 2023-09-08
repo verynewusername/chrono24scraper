@@ -16,5 +16,7 @@ bool Crawler::getNextContent()
     itemBuffer = scraper.getItemInfo(contentBuffer);
     itemBuffer.url = currentTarget;
 
+    std::cout << "LOG: " << ++counter << " URLs crawled." << std::endl;
+
     return true;
 }

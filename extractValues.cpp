@@ -35,6 +35,12 @@ void Scraper::extractValues(xmlNode* node, ItemStruct* itemStruct) {
                 // delete newlines in value
                 value.erase(std::remove(value.begin(), value.end(), '\n'), value.end());
 
+                // delete comas
+                value.erase(std::remove(value.begin(), value.end(), ','), value.end());
+
+                key = trimWhitespace(key);
+                value = trimWhitespace(value);
+
                 // Store the key-value pair in the itemStruct
                 if (key == "Listing code")
                     itemStruct->listingCode = value;

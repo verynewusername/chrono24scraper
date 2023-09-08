@@ -2,7 +2,9 @@
 
 void Crawler::getNextContentBuffer()
 {
-    std::cout << "LOG: targetListBuffer.size() = " << targetListBuffer.size() << std::endl;
+
+    std::cout << "LOG: Listing page index: " << listingPageIndex 
+        << " - " << targetListBuffer.size() << " targets left." << std::endl;
 
     if (targetListBuffer.size() == 0)
         throw std::runtime_error("targetListBuffer is empty. from getNextContentBuffer()");

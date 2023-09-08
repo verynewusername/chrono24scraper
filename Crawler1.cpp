@@ -6,7 +6,7 @@ Crawler::Crawler()
     targetURLPart2("&sortorder=0&specials=103&specials=104&usedOrNew=new&watchTypes=U"),
     counter(0),
     num_listing_pages(0),
-    listingPageIndex(0),
+    listingPageIndex(1),
     targetListBuffer(),
     contentBuffer(""),
     currentTarget(""),

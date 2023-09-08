@@ -29,6 +29,7 @@ private:
 
     void extractValues(xmlNode* node, ItemStruct *itemStruct);
 
+    std::string trimWhitespace(std::string str);
 };
 
 #endif // Path: Scraper.h
