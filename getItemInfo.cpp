@@ -2,24 +2,6 @@
 
 ItemStruct Scraper::getItemInfo(std::string const &content) {
 
-    // ItemStruct itemStruct = {
-    //     listingCode: "NULL",
-    //     brand: "NULL",
-    //     model: "NULL",
-    //     referenceNumber: "NULL",
-    //     movement: "NULL",
-    //     caseMaterial: "NULL",
-    //     braceletMaterial: "NULL",
-    //     condition: "NULL",
-    //     yearOfProduction: "NULL",
-    //     scopeOfDelivery: "NULL",
-    //     gender: "NULL",
-    //     price: "NULL",
-    //     numberOfJewels: "NULL",
-    //     dial: "NULL",
-    //     url: "NULL"
-    // };
-
     ItemStruct itemStruct;
 
     // Initialize libxml2
