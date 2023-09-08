@@ -65,6 +65,9 @@
         "algorithm": "cpp",
         "deque": "cpp",
         "regex": "cpp",
-        "*.ih": "cpp"
+        "*.ih": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp",
+        "stack": "cpp"
     }
 }

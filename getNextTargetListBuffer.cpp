@@ -32,12 +32,13 @@ void Crawler::getNextTargetListBuffer()
 
         curl_easy_cleanup(curl);
 
-        std::vector<std::string> tempTargetList = scraper.getPageLinks(readBuffer);
+        targetListBuffer = scraper.getPageLinks(readBuffer);
 
-        if (tempTargetList.size() == 0)
+        if (targetListBuffer.size() == 0)
             throw std::runtime_error("tempTargetList is empty.");
 
-        std::cout << "LOG: " << tempTargetList.size() << " URLs found on the current query page" << std::endl;
+        std::cout << "LOG: " << targetListBuffer.size() << " URLs found on the current query page" << std::endl;
+        std::cout << "LOG: Crawling page index: " << listingPageIndex << std::endl;
 
         // //print the list
         // for (auto const &i : tempTargetList)

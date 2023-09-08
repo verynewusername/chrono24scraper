@@ -2,14 +2,17 @@
 
 void Crawler::getNextContentBuffer()
 {
+    std::cout << "LOG: targetListBuffer.size() = " << targetListBuffer.size() << std::endl;
 
     if (targetListBuffer.size() == 0)
-        throw std::runtime_error("targetListBuffer is empty.");
+        throw std::runtime_error("targetListBuffer is empty. from getNextContentBuffer()");
 
     if (targetListBuffer.size() != 0) {
         currentTarget = targetListBuffer.back();
         targetListBuffer.pop_back();
     }
+    
+    // std::cout << "LOG: Crawling URL: " << currentTarget << std::endl;
 
     if (currentTarget != "") {
         CURL *curl;

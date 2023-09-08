@@ -41,5 +41,6 @@ void Crawler::getNumberOfListingPages()
         num_listing_pages = temp;
 
     std::cout << "LOG: Number of listing pages: " << num_listing_pages << std::endl;
+    // std::cout << "LOG: Page to crawl: " << listingPageIndex << std::endl;
 
 }

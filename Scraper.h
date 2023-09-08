@@ -27,7 +27,7 @@ private:
 
     void extractURLs(xmlNode* node, std::vector<std::string> &itemURLs);
 
-    void extractValues(xmlNode* node, ItemStruct &itemStruct);
+    void extractValues(xmlNode* node, ItemStruct *itemStruct);
 
 };
 
