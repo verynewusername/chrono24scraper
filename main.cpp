@@ -1,11 +1,12 @@
 #include "main.ih"
-#include <iostream>
 
 int main(int argc, char const **argv) 
 {
+    std::cout 
+        << "Chrono24 Scraper, written by Efe Sirin, Github: verynewusername"
+        << std::endl;
 
-    Crawler crawler = Crawler();
+    readyCheck();
 
     std::cout << "Done!\n";
-
 }

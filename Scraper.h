@@ -4,8 +4,9 @@
 #include <iostream>         // std::cout
 #include <string>           // std::string
 #include <vector>           // std::vector
-#include "itemStruct.h"     // itemStruct
 #include <libxml/HTMLparser.h>
+#include <regex>   
+#include "itemStruct.h"     // itemStruct
 
 class Scraper
 {
@@ -16,18 +17,17 @@ public:
 
     int getNumberOfPages(std::string const &content);
 
+    std::vector<std::string> getPageLinks(std::string const &content);
+
+    ItemStruct getItemInfo(std::string const &content);
+
+private:
+
     int extractPageNumber(xmlNode* node, int maxPage);
 
-    std::vector<std::string> getPageLinks(std::string const &content)
-    {
-        std::vector<std::string> pageLinks;
-        return pageLinks;
-    }
+    void extractURLs(xmlNode* node, std::vector<std::string> &itemURLs);
 
-    ItemStruct getItemInfo(std::string const &content) {
-        ItemStruct item;
-        return item;
-    }
+    void extractValues(xmlNode* node, ItemStruct &itemStruct);
 
 };
 

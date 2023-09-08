@@ -19,7 +19,7 @@ void Crawler::getNextTargetListBuffer()
         {
             curl_easy_setopt(curl, CURLOPT_URL, (targetURLPart1 + std::to_string(listingPageIndex) + targetURLPart2).c_str());
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-            curl_easy_setopt(curl, CURLOPT_WRITEDATA, &res);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
             res = curl_easy_perform(curl);
             if (res != CURLE_OK) 
@@ -37,10 +37,11 @@ void Crawler::getNextTargetListBuffer()
         if (tempTargetList.size() == 0)
             throw std::runtime_error("tempTargetList is empty.");
 
-        flushTargetListBuffer();
+        std::cout << "LOG: " << tempTargetList.size() << " URLs found on the current query page" << std::endl;
 
-        for (auto &i : tempTargetList)
-            targetListBuffer.push_back(i);
+        // //print the list
+        // for (auto const &i : tempTargetList)
+        //     std::cout << i << std::endl;
 
     }
     else 

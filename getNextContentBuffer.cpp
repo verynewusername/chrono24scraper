@@ -24,7 +24,7 @@ void Crawler::getNextContentBuffer()
         {
             curl_easy_setopt(curl, CURLOPT_URL, currentTarget.c_str());
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-            curl_easy_setopt(curl, CURLOPT_WRITEDATA, &res);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
             res = curl_easy_perform(curl);
             if (res != CURLE_OK) 

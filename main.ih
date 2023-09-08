@@ -1,1 +1,7 @@
-#include "Crawler.h"
+#include "Crawler.h"    // Crawler && ItemStruct 
+#include <iostream>     // std::cout
+#include <chrono>       // std::chrono::system_clock
+#include <fstream>      // std::ofstream
+
+void readyCheck();
+void run();

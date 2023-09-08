@@ -5,7 +5,7 @@ void Crawler::getNumberOfListingPages()
     if (targetURLPart1 == "" && targetURLPart2 == "")
         throw std::runtime_error("targetURLParts are empty.");
 
-    std::cout << "LOG: Getting number of listing pages...\n";
+    // std::cout << "LOG: Getting number of listing pages...\n";
 
 
     CURL *curl;
