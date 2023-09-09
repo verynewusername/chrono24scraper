@@ -4,7 +4,7 @@ Retrieves the watch information from the chrono24 website
 ## Dependencies
 
 ```
-LibXML2 only
+LibXML2 
 ```
 
 ## Installation
