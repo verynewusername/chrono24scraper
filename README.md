@@ -3,14 +3,13 @@ Retrieves the watch information from the chrono24 website
 
 ## Dependencies
 
-LibXML2 only
 ```
+LibXML2 only
 ```
 
 ## Installation
-```
-```
 MAC:
+```
 
 Setup Dependencies:
 
@@ -19,6 +18,8 @@ Setup Dependencies:
 Compile:
 
     g++-13 -lcurl -lxml2 -O3 *.cpp
+
+```
 
 ## Usage
 
